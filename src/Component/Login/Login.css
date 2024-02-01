@@ -1,0 +1,65 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* Change the background color as needed */
+}
+
+.loginForm {
+  width: 350px;
+  padding: 20px;
+
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.loginForm h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.loginForm form {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginForm input[type="text"],
+.loginForm input[type="password"] {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.loginForm button {
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loginForm button:hover {
+  background-color: #0056b3;
+}
+
+.loginForm p {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.loginForm p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.loginForm p a:hover {
+  text-decoration: underline;
+}

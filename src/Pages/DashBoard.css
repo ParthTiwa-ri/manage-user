@@ -1,0 +1,36 @@
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--black);
+  background: linear-gradient(
+    106.37deg,
+    #ffe1bc 29.63%,
+    #ffcfd1 51.55%,
+    #f3c6f1 90.85%
+  );
+}
+
+.glass {
+  display: grid;
+  height: 97%;
+  width: 97%;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 2rem;
+  gap: 16px;
+  grid-template-columns: 11rem auto;
+  overflow: hidden;
+}
+.title p {
+  margin-top: 4px;
+  font-weight: 600;
+  color: red;
+}
+.title {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+}

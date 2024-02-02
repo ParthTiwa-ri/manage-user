@@ -19,13 +19,11 @@ This is a React application built to allow users to create and manage their acco
 - Local Storage API: For persisting user authentication tokens or other necessary data locally in the browser.
 - Iconscout Library: For accessing and using icons within the application for better visual representation.
 
-## Data Persistence
+## Data Persistence & Route Protection
 
-User data is stored securely using the Local Storage API. This ensures that even after refreshing the page or closing the browser, the user's account data remains saved locally. The application retrieves this data upon initialization, allowing users to seamlessly continue their sessions without losing any information.
+- **Data Persistence**: User data is securely stored using the Local Storage API. This ensures that even after refreshing the page or closing the browser, the user's account data remains saved locally.
 
-## Route Protection
-
-To prevent unauthorized access to certain routes, the application implements route protection. Users must be authenticated before accessing sensitive pages such as the account management page. Unauthorized users attempting to access protected routes will be redirected to the login page.
+- **Route Protection**: To prevent unauthorized access to certain routes, the application implements route protection. Users must be authenticated before accessing sensitive pages such as the account management page. Unauthorized users attempting to access protected routes will be redirected to the login page.
 
 ## Getting Started
 

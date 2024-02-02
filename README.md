@@ -1,6 +1,5 @@
 Certainly! Here's how you can integrate the new sections into your existing README.md:
 
-`````markdown
 ````markdown
 # User Account Management App
 
@@ -43,8 +42,6 @@ Follow these steps to get a local copy of the project up and running on your mac
    ```bash
    git clone https://github.com/your-username/user-account-management-app.git
    ```
-````
-`````
 
 2. Navigate to the project directory:
 
@@ -91,7 +88,9 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+````
 
-````
 ```
-````
+
+Now the README.md includes sections detailing data persistence and security features.
+```

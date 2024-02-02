@@ -1,16 +1,18 @@
 import { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 import { useAccounts } from "../Context/AccountsContext";
-import "./DashBoard.css";
+import "./UserPanel.css";
 import Sidebar from "../Component/Dashboard/Sidebar/Sidebar";
+import { Outlet } from "react-router-dom";
 
-function Dashboard() {
-  const location = useLocation();
-  const { account } = location.state || {};
+function UserPanel() {
+  // const location = useLocation();
+  // const { account } = location.state || {};
   const [newUsername, setNewUsername] = useState("");
   const [message, setMessage] = useState("");
-  const { accounts, setAccounts } = useAccounts();
-  const navigate = useNavigate();
+  const { accounts, setAccounts, currAcc } = useAccounts();
+
+  // const navigate = useNavigate();
   const handleUsernameChange = (e) => {
     setNewUsername(e.target.value);
   };
@@ -21,7 +23,7 @@ function Dashboard() {
       setMessage("Please enter a new username.");
     } else {
       const updatedAccounts = accounts.map((item) => {
-        if (item.username === account.username) {
+        if (item.username === currAcc.username) {
           // Update the username of the current account
           return { ...item, username: newUsername };
         }
@@ -34,22 +36,22 @@ function Dashboard() {
       // Clear the input field
       setNewUsername("");
       // Navigate back to the dashboard with the updated account information
-      navigate("/dashboard", {
-        state: { account: { ...account, username: newUsername } },
-      });
+      // navigate("/dashboard", {
+      //   state: { account: { ...account, username: newUsername } },
+      // });
     }
   };
 
+  // setCurrAcc(accounts.find((item) => item.username === account.username));
+  console.log(currAcc);
   return (
     <div className="app">
       <div className="glass">
         <Sidebar />
-        {account && (
+        {currAcc && (
           <div>
-            <div className="title">
-              <h2>Welcome</h2>
-              <p>{account.fullName}</p>
-            </div>
+            <div className="title"></div>
+            <Outlet />
             {/* Form to update username */}
             <form onSubmit={handleSubmit}>
               <div>
@@ -71,4 +73,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default UserPanel;

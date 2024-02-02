@@ -13,7 +13,7 @@ export const AccountsProvider = ({ children }) => {
     storedCurrAcc = JSON.parse(localStorage.getItem("currAcc")) || null;
   } catch (error) {
     console.error("Error parsing stored accounts:", error);
-    // Handle the error, e.g., reset stored values to default
+    // Handle the error, reset stored values to default
     storedAccounts = [];
     storedCurrAcc = null;
   }
@@ -28,7 +28,7 @@ export const AccountsProvider = ({ children }) => {
       localStorage.setItem("accounts", JSON.stringify(accounts));
     } catch (error) {
       console.error("Error saving accounts to local storage:", error);
-      // Handle the error, e.g., show a notification to the user
+      // Handle the error
     }
   }, [accounts]);
 
@@ -38,7 +38,7 @@ export const AccountsProvider = ({ children }) => {
       localStorage.setItem("currAcc", JSON.stringify(currAcc));
     } catch (error) {
       console.error("Error saving currAcc to local storage:", error);
-      // Handle the error, e.g., show a notification to the user
+      // Handle the error,
     }
   }, [currAcc]);
 

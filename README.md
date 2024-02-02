@@ -24,8 +24,7 @@ This is a React application built to allow users to create and manage their acco
   ![VSCode](https://img.shields.io/badge/Visual_Studio-0078d7?style=for-the-badge&logo=visual%20studio&logoColor=white)
   ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
-
-## 🛡️ Non functional Feature
+## 🛡️ Non-functional Features
 
 - **Route Protection:** Ensures only authenticated users access sensitive pages, redirecting unauthorized users.
 - **Data Persistence:** Securely stores user data locally, maintaining session continuity across browser sessions.
@@ -39,7 +38,6 @@ Follow these steps to get a local copy of the project up and running on your mac
    ```bash
    git clone https://github.com/your-username/user-account-management-app.git
    ```
-````
 
 2. **Navigate to the project directory:**
 

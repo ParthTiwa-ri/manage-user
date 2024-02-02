@@ -76,5 +76,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ```
 
-Feel free to customize it according to your specific project details and requirements.
+Now the code block should render correctly with the appropriate syntax highlighting and formatting.
 ```

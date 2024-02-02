@@ -1,3 +1,6 @@
+Certainly! Here's how you can integrate the new sections into your existing README.md:
+
+`````markdown
 ````markdown
 # User Account Management App
 
@@ -17,6 +20,20 @@ This is a React application built to allow users to create and manage their acco
 - Local Storage API: For persisting user authentication tokens or other necessary data locally in the browser.
 - Iconscout Library: For accessing and using icons within the application for better visual representation.
 
+## Data Persistence
+
+User data is stored securely using the Local Storage API. This ensures that even after refreshing the page or closing the browser, the user's account data remains saved locally. The application retrieves this data upon initialization, allowing users to seamlessly continue their sessions without losing any information.
+
+## Security Features
+
+### Route Protection
+
+To prevent unauthorized access to certain routes, the application implements route protection. Users must be authenticated before accessing sensitive pages such as the account management page. Unauthorized users attempting to access protected routes will be redirected to the login page.
+
+### Authentication
+
+User authentication is handled securely, with sensitive data such as passwords being encrypted before storage. Upon login, users are issued a secure authentication token, which is stored locally and used to authenticate subsequent requests to the server. This token is invalidated upon logout or expiration, ensuring the security of user accounts.
+
 ## Getting Started
 
 Follow these steps to get a local copy of the project up and running on your machine:
@@ -27,6 +44,7 @@ Follow these steps to get a local copy of the project up and running on your mac
    git clone https://github.com/your-username/user-account-management-app.git
    ```
 ````
+`````
 
 2. Navigate to the project directory:
 
@@ -46,7 +64,7 @@ Follow these steps to get a local copy of the project up and running on your mac
    npm run dev
    ```
 
-5. Open your browser and visit `http://localhost:3000` to view the application.
+5. Open your browser and visit development server link to view the application.
 
 ## Usage
 
@@ -74,7 +92,6 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+````
 ```
-
-Now the code block should render correctly with the appropriate syntax highlighting and formatting.
-```
+````

@@ -1,3 +1,5 @@
+/* CSS for responsive login form */
+
 .wrapper {
   display: flex;
   justify-content: center;
@@ -6,9 +8,9 @@
 }
 
 .loginForm {
-  width: 350px;
+  width: 90%;
+  max-width: 350px;
   padding: 20px;
-
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -63,9 +65,11 @@
   text-decoration: underline;
 }
 
+/* Media query for responsiveness */
 @media (max-width: 768px) {
   .loginForm {
-    margin-bottom: 14rem;
-    margin-left: 2rem;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20rem;
   }
 }

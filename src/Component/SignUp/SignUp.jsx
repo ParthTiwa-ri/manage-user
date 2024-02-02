@@ -56,6 +56,34 @@ function SignUp() {
   // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Check if any field is empty
+    if (
+      !fullName ||
+      !username ||
+      !password ||
+      !mobileNumber ||
+      !address ||
+      !hobby
+    ) {
+      setError("Please fill in all fields.");
+      return;
+    }
+
+    // Validate mobile number format
+    const mobileNumberRegex = /^\d{10}$/;
+    if (!mobileNumberRegex.test(mobileNumber)) {
+      setError("Please enter a valid 10-digit mobile number.");
+      return;
+    }
+
+    // Check if the username already exists
+    if (accounts.find((item) => item.username === username)) {
+      setError("Username already exists");
+      return;
+    }
+
+    // If all validations pass, create a new user
     const newuser = {
       fullName,
       username,
@@ -65,17 +93,12 @@ function SignUp() {
       hobby,
     };
 
-    // Check if the username already exists
-    if (accounts.find((item) => item.username === username)) {
-      setError("Username already exists"); // Set error message
-    } else {
-      // Add the new user to the list of accounts
-      addAccount(newuser);
-      // Display success message
-      alert("Successfully Signed Up");
-      // Redirect to login page
-      navigate("/login");
-    }
+    // Add the new user to the list of accounts
+    addAccount(newuser);
+    // Display success message
+    alert("Successfully Signed Up");
+    // Redirect to login page
+    navigate("/login");
   };
 
   return (

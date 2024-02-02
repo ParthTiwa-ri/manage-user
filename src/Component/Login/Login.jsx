@@ -28,6 +28,13 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Input validation
+    if (!username || !password) {
+      setError("Please enter both username and password."); // Set error message
+      return;
+    }
+
     // Search for the account by username
     const acc = accounts.find((item) => item.username === username);
 

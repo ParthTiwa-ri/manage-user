@@ -2,14 +2,14 @@
 
 This is a React application built to allow users to create and manage their accounts. It provides functionality for user registration, login, and account information management.
 
-## Features
+## 🚀 Features
 
 - **User Registration**: Allows new users to create an account by providing necessary information such as username, email, and password.
 - **User Login:** Provides a login page for existing users to authenticate themselves and access their accounts.
 - **Account Management:** Once logged in, users can view and edit their account information, such as username, email, and password.
 - Cross platform
 
-## Technologies Used:
+## 🛠️ Technologies Used:
 
 - **React v16+**
 - **React Router:** For managing navigation and routing within the application.
@@ -23,12 +23,12 @@ This is a React application built to allow users to create and manage their acco
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![VSCode](https://img.shields.io/badge/Visual_Studio-0078d7?style=for-the-badge&logo=visual%20studio&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-## Non functional Feature
+## 🛡️ Non functional Feature
 
 - **Route Protection:** Ensures only authenticated users access sensitive pages, redirecting unauthorized users.
 - **Data Persistence:** Securely stores user data locally, maintaining session continuity across browser sessions.
 
-## Installation
+## 🛠️ Installation
 
 Follow these steps to get a local copy of the project up and running on your machine:
 
@@ -58,7 +58,7 @@ Follow these steps to get a local copy of the project up and running on your mac
 
 5. **Open your browser and visit the development server link to view the application.**
 
-## Usage
+## 🚀 Usage
 
 - **Homepage:** When you open the application, you will be directed to the homepage. This page contains links to the login and signup pages.
 - **Registration:** Click on the "Signup" link on the homepage to create a new account. Fill in the required information and submit the form.
@@ -66,7 +66,7 @@ Follow these steps to get a local copy of the project up and running on your mac
 - **Account Management:** Once logged in, you will be redirected to the account management page where you can view and edit your account information.
 - **Navigation:** You can navigate between pages using the links provided in the application or the browser's back and forward buttons.
 
-## Screenshots
+## 🖼️ Screenshots
 
 ![App Screenshot](https://github.com/ParthTiwa-ri/manage-user/assets/152166714/b2b2a4b5-fd9c-4d4e-ae14-325ce8b541ad)
 

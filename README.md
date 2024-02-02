@@ -30,6 +30,15 @@ This is a React application built to allow users to create and manage their acco
 - **Responsive Design**: Ensures the application adapts and functions seamlessly across various devices and screen sizes.
 - **Robustness**: Implements error handling, input validation, and security measures to ensure stable and secure user interactions.
 
+## 🚀 Usage
+
+- Open https://manage-account-gold.vercel.app/ in your browser.
+- **Homepage:** When you open the application, you will be directed to the homepage. This page contains links to the login and signup pages.
+- **Registration:** Click on the "Signup" link on the homepage to create a new account. Fill in the required information and submit the form.
+- **Login:** Alternatively, if you already have an account, click on the "Login" link on the homepage. Enter your credentials (username/email and password) on the login page and click "Login" to access your account.
+- **Account Management:** Once logged in, you will be redirected to the account management page where you can view and edit your account information.
+- **Navigation:** You can navigate between pages using the links provided in the application or the browser's back and forward buttons.
+
 ## 🛠️ Installation
 
 Follow these steps to get a local copy of the project up and running on your machine:
@@ -59,14 +68,6 @@ Follow these steps to get a local copy of the project up and running on your mac
    ```
 
 5. **Open your browser and visit the development server link to view the application.**
-
-## 🚀 Usage
-
-- **Homepage:** When you open the application, you will be directed to the homepage. This page contains links to the login and signup pages.
-- **Registration:** Click on the "Signup" link on the homepage to create a new account. Fill in the required information and submit the form.
-- **Login:** Alternatively, if you already have an account, click on the "Login" link on the homepage. Enter your credentials (username/email and password) on the login page and click "Login" to access your account.
-- **Account Management:** Once logged in, you will be redirected to the account management page where you can view and edit your account information.
-- **Navigation:** You can navigate between pages using the links provided in the application or the browser's back and forward buttons.
 
 ## 🖼️ Screenshots
 

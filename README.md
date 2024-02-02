@@ -21,7 +21,8 @@ This is a React application built to allow users to create and manage their acco
 
 ## Data Persistence
 
-User data is stored securely using the Local Storage API. This ensures that even after refreshing the page or closing the browser, the user's account data remains saved locally. The application retrieves this data upon initialization, allowing users to seamlessly continue their sessions without losing any information.
+User data is stored securely using the Local Storage API.
+This ensures that even after refreshing the page or closing the browser, the user's account data remains saved locally. The application retrieves this data upon initialization, allowing users to seamlessly continue their sessions without losing any information.
 
 ## Route Protection
 

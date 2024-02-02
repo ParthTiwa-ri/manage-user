@@ -6,12 +6,9 @@ It provides functionality for user registration, login, and account information 
 
 ## Features
 
-- User Registration: Allows new users to create an account by providing necessary information
-  such as username, email, and password.
-- User Login: Provides a login page for existing users to authenticate themselves
-  and access their accounts.
-- Account Management: Once logged in, users can view and edit their account information,
-  such as username, email, and password.
+- User Registration: Allows new users to create an account by providing necessary information such as username, email, and password.
+- User Login: Provides a login page for existing users to authenticate themselves and access their accounts.
+- Account Management: Once logged in, users can view and edit their account information, such as username, email, and password.
 
 ## Technologies Used
 

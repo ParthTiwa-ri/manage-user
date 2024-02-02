@@ -1,4 +1,4 @@
-Certainly! Here's the corrected syntax:
+To address the horizontal scrolling issue while reading the description of route protection and data storage, you can modify the Markdown syntax to ensure proper formatting and wrapping of the text. Here's the corrected syntax:
 
 ````markdown
 # User Account Management App
@@ -19,11 +19,13 @@ This is a React application built to allow users to create and manage their acco
 - Local Storage API: For persisting user authentication tokens or other necessary data locally in the browser.
 - Iconscout Library: For accessing and using icons within the application for better visual representation.
 
-## Data Persistence & Route Protection
+## Data Persistence
 
-- **Data Persistence**: User data is securely stored using the Local Storage API. This ensures that even after refreshing the page or closing the browser, the user's account data remains saved locally.
+User data is stored securely using the Local Storage API. This ensures that even after refreshing the page or closing the browser, the user's account data remains saved locally. The application retrieves this data upon initialization, allowing users to seamlessly continue their sessions without losing any information.
 
-- **Route Protection**: To prevent unauthorized access to certain routes, the application implements route protection. Users must be authenticated before accessing sensitive pages such as the account management page. Unauthorized users attempting to access protected routes will be redirected to the login page.
+## Route Protection
+
+To prevent unauthorized access to certain routes, the application implements route protection. Users must be authenticated before accessing sensitive pages such as the account management page. Unauthorized users attempting to access protected routes will be redirected to the login page.
 
 ## Getting Started
 
@@ -54,7 +56,7 @@ Follow these steps to get a local copy of the project up and running on your mac
    npm run dev
    ```
 
-5. Open your browser and visit development server link to view the application.
+5. Open your browser and visit the development server link to view the application.
 
 ## Usage
 
@@ -84,4 +86,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ```
 
+This adjustment ensures that the text doesn't extend beyond the visible area, preventing horizontal scrolling.
 ```

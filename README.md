@@ -1,5 +1,3 @@
-Sure, here's the adjusted text with bold headings and other elements preserved:
-
 ---
 
 **User Account Management App**

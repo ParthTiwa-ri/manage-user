@@ -1,5 +1,3 @@
-Sure, here's a sample `README.md` file for your React application:
-
 ````markdown
 # User Account Management App
 
@@ -28,7 +26,6 @@ Follow these steps to get a local copy of the project up and running on your mac
    ```bash
    git clone https://github.com/your-username/user-account-management-app.git
    ```
-````
 
 2. Navigate to the project directory:
 
@@ -80,3 +77,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Feel free to customize it according to your specific project details and requirements.
 ```
+````

@@ -43,7 +43,7 @@ Follow these steps to get a local copy of the project up and running on your mac
 2. **Navigate to the project directory:**
 
    ```bash
-   cd user-account-management-app
+   cd manage-user
    ```
 
 3. **Install dependencies:**

@@ -2,7 +2,7 @@
 
 .dashboard-container {
   max-width: 600px;
-  min-width: 300px; /* Adjust minimum width for smaller screens */
+  min-width: 300px;
   margin: 0 auto;
   padding: 20px;
   height: 30rem;
@@ -12,7 +12,7 @@
 
 .dashboard-header {
   text-align: center;
-  margin-bottom: 20px; /* Reduce margin for smaller screens */
+  margin-bottom: 20px;
 }
 
 .dashboard-details p {
@@ -37,7 +37,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  font-size: medium; /* Adjust font size for smaller screens */
+  font-size: medium;
   color: #788097;
 }
 
@@ -55,23 +55,23 @@
 }
 
 .title span {
-  font-size: 16px; /* Adjust font size for smaller screens */
+  font-size: 16px;
   color: brown;
 }
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
   .dashboard-container {
-    max-width: 90%; /* Adjust maximum width for smaller screens */
-    min-width: auto; /* Remove minimum width */
-    height: auto; /* Adjust height to fit content */
+    max-width: 90%;
+    min-width: auto;
+    height: auto;
   }
 
   .dashboard-details {
-    font-size: small; /* Adjust font size for smaller screens */
+    font-size: small;
   }
 
   .title span {
-    font-size: 14px; /* Adjust font size for smaller screens */
+    font-size: 14px;
   }
 }

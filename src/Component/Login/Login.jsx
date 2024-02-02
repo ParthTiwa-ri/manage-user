@@ -38,7 +38,7 @@ function Login() {
       // Navigate to the dashboard page with current account data
       navigate("/userpanel");
     } else {
-      console.log("Unsuccessful login");
+      alert("Wrong Username or Password");
     }
   };
 

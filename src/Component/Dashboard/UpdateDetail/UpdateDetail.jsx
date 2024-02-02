@@ -4,13 +4,13 @@ import "./UpdateDetail.css";
 
 function UpdateDetail() {
   const [message, setMessage] = useState("");
-  const [newUsername, setNewUsername] = useState("");
+  const [newFullname, setNewUsername] = useState("");
   const [newMobileNumber, setNewMobileNumber] = useState("");
   const [newHobby, setNewHobby] = useState("");
   const [newAddress, setNewAddress] = useState("");
   const { accounts, setAccounts, currAcc, setCurrAcc } = useAccounts();
 
-  const handleUsernameChange = (e) => {
+  const handleFullnameChange = (e) => {
     setNewUsername(e.target.value);
   };
 
@@ -28,7 +28,7 @@ function UpdateDetail() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!newUsername && !newMobileNumber && !newHobby && !newAddress) {
+    if (!newFullname && !newMobileNumber && !newHobby && !newAddress) {
       setMessage("Please insert at least one information.");
       return;
     }
@@ -37,7 +37,7 @@ function UpdateDetail() {
       if (item.username === currAcc.username) {
         const updatedDetail = {
           ...item,
-          fullName: newUsername || item.fullName,
+          fullName: newFullname || item.fullName,
           mobileNumber: newMobileNumber || item.mobileNumber,
           hobby: newHobby || item.hobby,
           address: newAddress || item.address,
@@ -62,12 +62,12 @@ function UpdateDetail() {
         <div className="form-container vertical-center-item ">
           <form onSubmit={handleSubmit}>
             <div className="form-group">
-              <label htmlFor="newUsername">New Username:</label>
+              <label htmlFor="newUsername">New Full Name:</label>
               <input
                 type="text"
-                id="newUsername"
-                value={newUsername}
-                onChange={handleUsernameChange}
+                id="newFullname"
+                value={newFullname}
+                onChange={handleFullnameChange}
               />
             </div>
             <div className="form-group">

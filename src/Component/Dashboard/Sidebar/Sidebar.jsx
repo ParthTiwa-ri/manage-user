@@ -7,12 +7,17 @@ import { SidebarData } from "../../../data/data";
 // import Logo from "../../imgs/logo.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useAuth } from "../../../Context/AuthContext";
 
 function Sidebar() {
   const [selected, setSelected] = useState(0);
+  const { setAuthenticated } = useAuth();
 
   function handleClick(index) {
     setSelected(index);
+    if (index == 2) {
+      setAuthenticated(false);
+    }
   }
   return (
     <div className="sidebar">

@@ -5,7 +5,13 @@ import { createContext, useContext, useEffect, useState } from "react";
 const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
-  const [isAuthenticated, setAuthenticated] = useState(false);
+  const intital = JSON.parse(localStorage.getItem("isAuthenticated")) || false;
+  const [isAuthenticated, setAuthenticated] = useState(intital);
+
+  useEffect(() => {
+    // Save account state to local storage whenever it changes
+    localStorage.setItem("isAuthenticated", JSON.stringify(isAuthenticated));
+  }, [isAuthenticated]);
   return (
     // Step 3: Wrap your application with the provider
     <AuthContext.Provider value={{ isAuthenticated, setAuthenticated }}>

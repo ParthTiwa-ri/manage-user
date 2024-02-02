@@ -29,7 +29,14 @@ function App() {
                     </ProtectedRoute>
                   }
                 />
-                <Route path="updateDetails" element={<UpdateDetail />} />
+                <Route
+                  path="updateDetails"
+                  element={
+                    <ProtectedRoute>
+                      <UpdateDetail />
+                    </ProtectedRoute>
+                  }
+                />
               </Route>
               <Route path="*" element={<PageNotFound />} />
             </Routes>

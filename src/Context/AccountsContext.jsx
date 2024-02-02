@@ -1,16 +1,25 @@
 /* eslint-disable react/prop-types */
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useEffect, useContext } from "react";
 
-// Step 1: Create a context
 const AccountsContext = createContext();
 
-// Step 2: Create a provider component
 export const AccountsProvider = ({ children }) => {
-  const [accounts, setAccounts] = useState([]);
-  const [currAcc, setCurrAcc] = useState(null);
+  const storedAccounts = JSON.parse(localStorage.getItem("accounts")) || [];
+  const storedCurrAcc = JSON.parse(localStorage.getItem("currAcc")) || null;
+  const [accounts, setAccounts] = useState(storedAccounts);
+  const [currAcc, setCurrAcc] = useState(storedCurrAcc);
+
+  useEffect(() => {
+    // Save account state to local storage whenever it changes
+    localStorage.setItem("accounts", JSON.stringify(accounts));
+  }, [accounts]);
+
+  useEffect(() => {
+    // Save currAcc state to local storage whenever it changes
+    localStorage.setItem("currAcc", JSON.stringify(currAcc));
+  }, [currAcc]);
 
   return (
-    // Step 3: Wrap your application with the provider
     <AccountsContext.Provider
       value={{ accounts, setAccounts, currAcc, setCurrAcc }}
     >
@@ -19,11 +28,10 @@ export const AccountsProvider = ({ children }) => {
   );
 };
 
-// Step 4: Create a custom hook to use the context
 // eslint-disable-next-line react-refresh/only-export-components
 export const useAccounts = () => {
   const context = useContext(AccountsContext);
   if (context === undefined)
-    throw new Error("AccountProvider was used ouside of it context");
-  else return context;
+    throw new Error("useAccounts must be used within an AccountsProvider");
+  return context;
 };

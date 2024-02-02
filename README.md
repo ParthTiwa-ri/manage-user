@@ -32,7 +32,7 @@ This is a React application built to allow users to create and manage their acco
 
 ## 🚀 Usage
 
-- Access the account management portal at your earliest convenience by navigating to the following URL Please access the [account management portal](https://manage-account-gold.vercel.app/) in your browser.
+- Please access the [account management portal](https://manage-account-gold.vercel.app/) in your browser.
 
 - **Homepage:** When you open the application, you will be directed to the homepage. This page contains links to the login and signup pages.
 - **Registration:** Click on the "Signup" link on the homepage to create a new account. Fill in the required information and submit the form.

@@ -19,6 +19,12 @@ function UpdateDetail() {
   const handleHobbyChange = (e) => setNewHobby(e.target.value);
   const handleAddressChange = (e) => setNewAddress(e.target.value);
 
+  // Function to validate phone number
+  const validatePhoneNumber = (phoneNumber) => {
+    const phoneNumberPattern = /^\d{10}$/;
+    return phoneNumberPattern.test(phoneNumber);
+  };
+
   // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,6 +32,12 @@ function UpdateDetail() {
     // Check if at least one information is provided
     if (!newFullname && !newMobileNumber && !newHobby && !newAddress) {
       setMessage("Please insert at least one information.");
+      return;
+    }
+
+    // Validate phone number
+    if (newMobileNumber && !validatePhoneNumber(newMobileNumber)) {
+      setMessage("Please enter a valid phone number.");
       return;
     }
 
@@ -65,6 +77,7 @@ function UpdateDetail() {
               <label htmlFor="newFullname">New Full Name:</label>
               <input
                 type="text"
+                placeholder="Leave Blank if want no Change"
                 id="newFullname"
                 value={newFullname}
                 onChange={handleFullnameChange}
@@ -75,6 +88,7 @@ function UpdateDetail() {
               <label htmlFor="newMobileNumber">New Mobile Number:</label>
               <input
                 type="text"
+                placeholder="Leave Blank if want no Change"
                 id="newMobileNumber"
                 value={newMobileNumber}
                 onChange={handleMobileNumberChange}
@@ -86,6 +100,7 @@ function UpdateDetail() {
               <input
                 type="text"
                 id="newHobby"
+                placeholder="Leave Blank if want no Change"
                 value={newHobby}
                 onChange={handleHobbyChange}
               />
@@ -96,6 +111,7 @@ function UpdateDetail() {
               <input
                 type="text"
                 id="newAddress"
+                placeholder="Leave Blank if want no Change"
                 value={newAddress}
                 onChange={handleAddressChange}
               />

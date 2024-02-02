@@ -62,4 +62,5 @@ Follow these steps to get a local copy of the project up and running on your mac
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot]("https://github.com/ParthTiwa-ri/manage-user/assets/152166714/b2b2a4b5-fd9c-4d4e-ae14-325ce8b541ad")
+<img width="1440" alt="Screenshot 2024-02-02 at 3 30 36 PM" src="https://github.com/ParthTiwa-ri/manage-user/assets/152166714/b2b2a4b5-fd9c-4d4e-ae14-325ce8b541ad">

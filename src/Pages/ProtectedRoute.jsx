@@ -5,15 +5,16 @@ import { useAuth } from "../Context/AuthContext";
 
 function ProtectedRoute({ children }) {
   const { isAuthenticated } = useAuth();
+
   const navigate = useNavigate();
 
-  useEffect(
-    function () {
-      if (!isAuthenticated) navigate("/");
-    },
-    [isAuthenticated, navigate]
-  );
+  // Use useEffect to redirect if user is not authenticated
+  useEffect(() => {
+    // If user is not authenticated, redirect to the homepage
+    if (!isAuthenticated) navigate("/");
+  }, [isAuthenticated, navigate]);
 
+  // Render children only if user is authenticated, otherwise return null
   return isAuthenticated ? children : null;
 }
 

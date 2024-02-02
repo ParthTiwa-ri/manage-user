@@ -4,22 +4,26 @@ import { createContext, useState, useEffect, useContext } from "react";
 const AccountsContext = createContext();
 
 export const AccountsProvider = ({ children }) => {
+  // Load accounts and currAcc state from localStorage or use default values
   const storedAccounts = JSON.parse(localStorage.getItem("accounts")) || [];
   const storedCurrAcc = JSON.parse(localStorage.getItem("currAcc")) || null;
+
+  // Set up state variables for accounts and currAcc
   const [accounts, setAccounts] = useState(storedAccounts);
   const [currAcc, setCurrAcc] = useState(storedCurrAcc);
 
+  // Step 3: Use useEffect to save accounts state to local storage whenever it changes
   useEffect(() => {
-    // Save account state to local storage whenever it changes
     localStorage.setItem("accounts", JSON.stringify(accounts));
   }, [accounts]);
 
+  // Step 4: Use useEffect to save currAcc state to local storage whenever it changes
   useEffect(() => {
-    // Save currAcc state to local storage whenever it changes
     localStorage.setItem("currAcc", JSON.stringify(currAcc));
   }, [currAcc]);
 
   return (
+    // Step 5: Wrap your application with the provider
     <AccountsContext.Provider
       value={{ accounts, setAccounts, currAcc, setCurrAcc }}
     >
@@ -28,10 +32,12 @@ export const AccountsProvider = ({ children }) => {
   );
 };
 
+// Step 6: Create a custom hook to use the context
 // eslint-disable-next-line react-refresh/only-export-components
 export const useAccounts = () => {
   const context = useContext(AccountsContext);
+  // Throw an error if the hook is used outside of the AccountsProvider
   if (context === undefined)
     throw new Error("useAccounts must be used within an AccountsProvider");
-  return context;
+  else return context;
 };

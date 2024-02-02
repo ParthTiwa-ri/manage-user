@@ -1,21 +1,13 @@
-// import { useState } from "react";
-// import { useLocation } from "react-router-dom";
-// import { useAccounts } from "../Context/AccountsContext";
 import "./UserPanel.css";
-import Sidebar from "../Component/Dashboard/Sidebar/Sidebar";
-import { Outlet } from "react-router-dom";
+import Sidebar from "../Component/UserDetail/Sidebar/Sidebar";
+import { Outlet } from "react-router-dom"; // Import Outlet component for nested routing
 
 function UserPanel() {
-  // const location = useLocation();
-  // const { account } = location.state || {};
-
-  // const navigate = useNavigate();
-
   return (
     <div className="app">
       <div className="glass">
-        <Sidebar />
-        <Outlet />
+        <Sidebar /> {/* Render Sidebar component */}
+        <Outlet /> {/* Render nested routes */}
       </div>
     </div>
   );

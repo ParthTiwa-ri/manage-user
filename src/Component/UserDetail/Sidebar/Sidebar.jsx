@@ -2,9 +2,6 @@
 
 import "./Sidebar.css";
 import { SidebarData } from "../../../data/data";
-// import React from "react"; // Import React to use JSX
-
-// import Logo from "../../imgs/logo.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../../Context/AuthContext";
@@ -13,21 +10,23 @@ function Sidebar() {
   const [selected, setSelected] = useState(0);
   const { setAuthenticated } = useAuth();
 
+  // Function to handle menu item click
   function handleClick(index) {
     setSelected(index);
+    // If logout item is clicked, set authentication status to false
     if (index == 2) {
       setAuthenticated(false);
     }
   }
+
   return (
     <div className="sidebar">
-      {/* logo */}
+      {/* Logo */}
       <div className="logo">
-        {/* <img src={Logo} alt="logo" /> */}
         <span>Menu</span>
       </div>
 
-      {/* menu */}
+      {/* Menu items */}
       <div className="menu">
         {SidebarData.map((item, index) => (
           <MenuItem
@@ -44,6 +43,7 @@ function Sidebar() {
   );
 }
 
+// Menu item component
 function MenuItem({ icon: Icon, heading, isActive, route, onClick }) {
   return (
     <Link style={{ textDecoration: "none", color: "inherit" }} to={`${route}`}>

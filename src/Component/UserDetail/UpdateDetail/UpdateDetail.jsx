@@ -3,36 +3,33 @@ import { useAccounts } from "../../../Context/AccountsContext";
 import "./UpdateDetail.css";
 
 function UpdateDetail() {
+  // State variables for form fields and message
   const [message, setMessage] = useState("");
-  const [newFullname, setNewUsername] = useState("");
+  const [newFullname, setNewFullname] = useState("");
   const [newMobileNumber, setNewMobileNumber] = useState("");
   const [newHobby, setNewHobby] = useState("");
   const [newAddress, setNewAddress] = useState("");
+
+  // Destructure context and update functions from AccountsContext
   const { accounts, setAccounts, currAcc, setCurrAcc } = useAccounts();
 
-  const handleFullnameChange = (e) => {
-    setNewUsername(e.target.value);
-  };
+  // Event handlers for form inputs
+  const handleFullnameChange = (e) => setNewFullname(e.target.value);
+  const handleMobileNumberChange = (e) => setNewMobileNumber(e.target.value);
+  const handleHobbyChange = (e) => setNewHobby(e.target.value);
+  const handleAddressChange = (e) => setNewAddress(e.target.value);
 
-  const handleMobileNumberChange = (e) => {
-    setNewMobileNumber(e.target.value);
-  };
-
-  const handleHobbyChange = (e) => {
-    setNewHobby(e.target.value);
-  };
-
-  const handleAddressChange = (e) => {
-    setNewAddress(e.target.value);
-  };
-
+  // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Check if at least one information is provided
     if (!newFullname && !newMobileNumber && !newHobby && !newAddress) {
       setMessage("Please insert at least one information.");
       return;
     }
 
+    // Update account details
     const updatedAccounts = accounts.map((item) => {
       if (item.username === currAcc.username) {
         const updatedDetail = {
@@ -48,9 +45,10 @@ function UpdateDetail() {
       return item;
     });
 
+    // Update accounts state, reset form fields, and display success message
     setAccounts(updatedAccounts);
     setMessage("Details updated successfully.");
-    setNewUsername("");
+    setNewFullname("");
     setNewMobileNumber("");
     setNewHobby("");
     setNewAddress("");
@@ -58,11 +56,13 @@ function UpdateDetail() {
 
   return (
     <>
+      {/* Render form only if current account exists */}
       {currAcc && (
-        <div className="form-container vertical-center-item ">
+        <div className="form-container vertical-center-item">
           <form onSubmit={handleSubmit}>
+            {/* Full Name input */}
             <div className="form-group">
-              <label htmlFor="newUsername">New Full Name:</label>
+              <label htmlFor="newFullname">New Full Name:</label>
               <input
                 type="text"
                 id="newFullname"
@@ -70,6 +70,7 @@ function UpdateDetail() {
                 onChange={handleFullnameChange}
               />
             </div>
+            {/* Mobile Number input */}
             <div className="form-group">
               <label htmlFor="newMobileNumber">New Mobile Number:</label>
               <input
@@ -79,6 +80,7 @@ function UpdateDetail() {
                 onChange={handleMobileNumberChange}
               />
             </div>
+            {/* Hobby input */}
             <div className="form-group">
               <label htmlFor="newHobby">New Hobby:</label>
               <input
@@ -88,6 +90,7 @@ function UpdateDetail() {
                 onChange={handleHobbyChange}
               />
             </div>
+            {/* Address input */}
             <div className="form-group">
               <label htmlFor="newAddress">New Address:</label>
               <input
@@ -97,10 +100,12 @@ function UpdateDetail() {
                 onChange={handleAddressChange}
               />
             </div>
+            {/* Submit button */}
             <button type="submit" className="submit-btn">
               Update Details
             </button>
           </form>
+          {/* Display message if exists */}
           {message && <p className="message">{message}</p>}
         </div>
       )}

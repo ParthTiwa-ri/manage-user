@@ -6,35 +6,36 @@ import Navbar from "../Navbar/Navbar";
 import { useAuth } from "../../Context/AuthContext";
 
 function Login() {
+  // State variables
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  // Hooks
   const { accounts, setCurrAcc } = useAccounts();
   const { isAuthenticated, setAuthenticated } = useAuth();
   const navigate = useNavigate(); // Initialize useNavigate hook
 
-  useEffect(
-    function () {
-      if (isAuthenticated) navigate("/userpanel");
-    },
-    [isAuthenticated, navigate]
-  );
+  // Effects
+  useEffect(() => {
+    // Redirect to user panel if already authenticated
+    if (isAuthenticated) navigate("/userpanel");
+  }, [isAuthenticated, navigate]);
 
-  const handleUsernameChange = (e) => {
-    setUsername(e.target.value);
-  };
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
+  // Event handlers
+  const handleUsernameChange = (e) => setUsername(e.target.value);
+  const handlePasswordChange = (e) => setPassword(e.target.value);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Search for the account by username
     const acc = accounts.find((item) => item.username === username);
 
     if (acc && acc.password === password) {
-      alert("Successful login");
-      setCurrAcc(acc);
-      setAuthenticated(true);
+      // Check if account exists and password matches
+      alert("Successful login"); // Display success message
+      setCurrAcc(acc); // Set current account
+      setAuthenticated(true); // Set authentication status to true
+
       // Navigate to the dashboard page with current account data
       navigate("/userpanel");
     } else {
@@ -44,25 +45,31 @@ function Login() {
 
   return (
     <>
+      {/* Render Navbar */}
       <Navbar />
+
       <div className="wrapper">
         <div className="loginForm">
           <h1>Login</h1>
           <form onSubmit={handleSubmit}>
+            {/* Username input */}
             <input
               type="text"
               placeholder="Username"
               value={username}
               onChange={handleUsernameChange}
             />
+            {/* Password input */}
             <input
               type="password"
               placeholder="Password"
               value={password}
               onChange={handlePasswordChange}
             />
+            {/* Submit button */}
             <button type="submit">Submit</button>
           </form>
+          {/* Link to signup page */}
           <div>
             <p>
               Dont have an account? <Link to="/signup">Signup</Link>

@@ -4,26 +4,33 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 const AuthContext = createContext();
 
+// provider component
 export function AuthProvider({ children }) {
+  // Initialize isAuthenticated state with the value from localStorage, default to false if not found
   const intital = JSON.parse(localStorage.getItem("isAuthenticated")) || false;
   const [isAuthenticated, setAuthenticated] = useState(intital);
 
+  // Save isAuthenticated state to localStorage whenever it changes
   useEffect(() => {
-    // Save account state to local storage whenever it changes
     localStorage.setItem("isAuthenticated", JSON.stringify(isAuthenticated));
   }, [isAuthenticated]);
+
   return (
-    // Step 3: Wrap your application with the provider
+    //  Wrap application with the provider
     <AuthContext.Provider value={{ isAuthenticated, setAuthenticated }}>
       {children}
     </AuthContext.Provider>
   );
 }
 
+// Step 4: Create a custom hook to use the context
 // eslint-disable-next-line react-refresh/only-export-components
 export const useAuth = () => {
+  // Use the useContext hook to access the AuthContext
   const context = useContext(AuthContext);
+
+  // Throw an error if the hook is used outside of the AuthProvider
   if (context === undefined)
-    throw new Error("AccountProvider was used ouside of it context");
+    throw new Error("useAuth must be used within an AuthProvider");
   else return context;
 };

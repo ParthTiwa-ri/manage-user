@@ -1,9 +1,8 @@
-To address the horizontal scrolling issue while reading the description of route protection and data storage, you can modify the Markdown syntax to ensure proper formatting and wrapping of the text. Here's the corrected syntax:
-
 ````markdown
 # User Account Management App
 
-This is a React application built to allow users to create and manage their accounts. It provides functionality for user registration, login, and account information management.
+This is a React application built to allow users to create and manage their accounts.
+It provides functionality for user registration, login, and account information management.
 
 ## Features
 

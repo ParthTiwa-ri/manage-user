@@ -69,8 +69,8 @@ Follow these steps to get a local copy of the project up and running on your mac
 ## 🖼️ Screenshots
 
 
-<img width="1440" alt="Screenshot 2024-02-02 at 3 38 44 PM" src="https://github.com/ParthTiwa-ri/manage-user/assets/152166714/4404ebd3-7720-4215-a1e7-972200cef4ae">
 <img width="1439" alt="Screenshot 2024-02-02 at 3 38 33 PM" src="https://github.com/ParthTiwa-ri/manage-user/assets/152166714/ccb8a9ef-6c3b-4f04-8d54-282b11253b06">
+<img width="1440" alt="Screenshot 2024-02-02 at 3 38 44 PM" src="https://github.com/ParthTiwa-ri/manage-user/assets/152166714/4404ebd3-7720-4215-a1e7-972200cef4ae">
 <img width="1440" alt="Screenshot 2024-02-02 at 3 38 14 PM" src="https://github.com/ParthTiwa-ri/manage-user/assets/152166714/e718e8c0-54f8-43ef-9305-9ff9617b60d3">
 <img width="1440" alt="Screenshot 2024-02-02 at 3 38 02 PM" src="https://github.com/ParthTiwa-ri/manage-user/assets/152166714/c2b1dcb2-3497-4adc-9042-a668f31cd6b1">
 

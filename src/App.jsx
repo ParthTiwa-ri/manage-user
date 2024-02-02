@@ -21,15 +21,15 @@ function App() {
             {/* Router component for handling navigation */}
             <Routes>
               {/* Define routes */}
-              <Route index element={<HomePage />} />{" "}
+              <Route index element={<HomePage />} />
               {/* Default route to HomePage */}
-              <Route path="login" element={<Login />} />{" "}
+              <Route path="login" element={<Login />} />
               {/* Route to Login component */}
-              <Route path="SignUp" element={<SignUp />} />{" "}
+              <Route path="SignUp" element={<SignUp />} />
               {/* Route to SignUp component */}
               <Route path="userpanel" element={<UserPanel />}>
                 {/* Nested route for UserPanel */}
-                <Route index element={<Navigate to="dashboard" />} />{" "}
+                <Route index element={<Navigate to="dashboard" />} />
                 {/* Default route within UserPanel to navigate to dashboard */}
                 <Route
                   path="dashboard"

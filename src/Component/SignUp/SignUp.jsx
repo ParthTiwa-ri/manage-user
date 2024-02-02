@@ -1,18 +1,19 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./SignUp.css"; 
-import { useAccounts } from "../../Context/AccountsContext"; 
-import Navbar from "../Navbar/Navbar"; 
-import { useAuth } from "../../Context/AuthContext"; 
+import "./SignUp.css";
+import { useAccounts } from "../../Context/AccountsContext";
+import Navbar from "../Navbar/Navbar";
+import { useAuth } from "../../Context/AuthContext";
 
 function SignUp() {
-  // State variables for form inputs
+  // State variables for form inputs and error
   const [fullName, setFullName] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [mobileNumber, setMobileNumber] = useState("");
   const [address, setAddress] = useState("");
   const [hobby, setHobby] = useState("");
+  const [error, setError] = useState(""); // State variable for error
 
   // Accessing accounts context and navigation functionality
   const { accounts, setAccounts } = useAccounts();
@@ -66,7 +67,7 @@ function SignUp() {
 
     // Check if the username already exists
     if (accounts.find((item) => item.username === username)) {
-      alert("Username already exists");
+      setError("Username already exists"); // Set error message
     } else {
       // Add the new user to the list of accounts
       addAccount(newuser);
@@ -85,6 +86,8 @@ function SignUp() {
           {/* Sign-up form */}
           <form onSubmit={handleSubmit}>
             <h2>Registration</h2>
+            {/* Error message display */}
+            {error && <div className="error">{error}</div>}
             <input
               type="text"
               placeholder="Full Name"

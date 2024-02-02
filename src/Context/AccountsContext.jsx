@@ -5,8 +5,18 @@ const AccountsContext = createContext();
 
 export const AccountsProvider = ({ children }) => {
   // Load accounts and currAcc state from localStorage or use default values
-  const storedAccounts = JSON.parse(localStorage.getItem("accounts")) || [];
-  const storedCurrAcc = JSON.parse(localStorage.getItem("currAcc")) || null;
+  let storedAccounts = [];
+  let storedCurrAcc = null;
+
+  try {
+    storedAccounts = JSON.parse(localStorage.getItem("accounts")) || [];
+    storedCurrAcc = JSON.parse(localStorage.getItem("currAcc")) || null;
+  } catch (error) {
+    console.error("Error parsing stored accounts:", error);
+    // Handle the error, e.g., reset stored values to default
+    storedAccounts = [];
+    storedCurrAcc = null;
+  }
 
   // Set up state variables for accounts and currAcc
   const [accounts, setAccounts] = useState(storedAccounts);
@@ -14,12 +24,22 @@ export const AccountsProvider = ({ children }) => {
 
   // Use useEffect to save accounts state to local storage whenever it changes
   useEffect(() => {
-    localStorage.setItem("accounts", JSON.stringify(accounts));
+    try {
+      localStorage.setItem("accounts", JSON.stringify(accounts));
+    } catch (error) {
+      console.error("Error saving accounts to local storage:", error);
+      // Handle the error, e.g., show a notification to the user
+    }
   }, [accounts]);
 
-  //  Use useEffect to save currAcc state to local storage whenever it changes
+  // Use useEffect to save currAcc state to local storage whenever it changes
   useEffect(() => {
-    localStorage.setItem("currAcc", JSON.stringify(currAcc));
+    try {
+      localStorage.setItem("currAcc", JSON.stringify(currAcc));
+    } catch (error) {
+      console.error("Error saving currAcc to local storage:", error);
+      // Handle the error, e.g., show a notification to the user
+    }
   }, [currAcc]);
 
   return (
@@ -32,7 +52,7 @@ export const AccountsProvider = ({ children }) => {
   );
 };
 
-// Step 6: Create a custom hook to use the context
+// Create a custom hook to use the context
 // eslint-disable-next-line react-refresh/only-export-components
 export const useAccounts = () => {
   const context = useContext(AccountsContext);

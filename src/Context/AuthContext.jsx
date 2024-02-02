@@ -7,12 +7,22 @@ const AuthContext = createContext();
 // provider component
 export function AuthProvider({ children }) {
   // Initialize isAuthenticated state with the value from localStorage, default to false if not found
-  const intital = JSON.parse(localStorage.getItem("isAuthenticated")) || false;
-  const [isAuthenticated, setAuthenticated] = useState(intital);
+  let initial;
+  try {
+    initial = JSON.parse(localStorage.getItem("isAuthenticated")) || false;
+  } catch (error) {
+    console.error("Error retrieving isAuthenticated from localStorage:", error);
+    initial = false;
+  }
+  const [isAuthenticated, setAuthenticated] = useState(initial);
 
   // Save isAuthenticated state to localStorage whenever it changes
   useEffect(() => {
-    localStorage.setItem("isAuthenticated", JSON.stringify(isAuthenticated));
+    try {
+      localStorage.setItem("isAuthenticated", JSON.stringify(isAuthenticated));
+    } catch (error) {
+      console.error("Error setting isAuthenticated to localStorage:", error);
+    }
   }, [isAuthenticated]);
 
   return (

@@ -9,6 +9,7 @@ function Login() {
   // State variables
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState(""); // State variable for error
 
   // Hooks
   const { accounts, setCurrAcc } = useAccounts();
@@ -39,7 +40,7 @@ function Login() {
       // Navigate to the dashboard page with current account data
       navigate("/userpanel");
     } else {
-      alert("Wrong Username or Password");
+      setError("Wrong Username or Password"); // Set error message
     }
   };
 
@@ -51,6 +52,8 @@ function Login() {
       <div className="wrapper">
         <div className="loginForm">
           <h1>Login</h1>
+          {/* Error message display */}
+          {error && <div className="error">{error}</div>}
           <form onSubmit={handleSubmit}>
             {/* Username input */}
             <input

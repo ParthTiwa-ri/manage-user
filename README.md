@@ -7,7 +7,6 @@ This is a React application built to allow users to create and manage their acco
 - **User Registration**: Allows new users to create an account by providing necessary information such as username, email, and password.
 - **User Login:** Provides a login page for existing users to authenticate themselves and access their accounts.
 - **Account Management:** Once logged in, users can view and edit their account information, such as username, email, and password.
-- Cross platform
 
 ## 🛠️ Technologies Used:
 

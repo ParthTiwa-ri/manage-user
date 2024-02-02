@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import "./Login.css";
 import { useAccounts } from "../../Context/AccountsContext";
-import Navbar from "../Navbar/Navbar";
 import { useAuth } from "../../Context/AuthContext";
+import { useNavigate } from "react-router-dom";
+import LoginForm from "./Loginform";
 
 function Login() {
   // State variables
@@ -40,7 +39,7 @@ function Login() {
 
     if (acc && acc.password === password) {
       // Check if account exists and password matches
-      alert("Successful login"); // Display success message
+      alert("Successful login");
       setCurrAcc(acc); // Set current account
       setAuthenticated(true); // Set authentication status to true
 
@@ -52,42 +51,16 @@ function Login() {
   };
 
   return (
-    <>
-      {/* Render Navbar */}
-      <Navbar />
-
-      <div className="wrapper">
-        <div className="loginForm">
-          <h1>Login</h1>
-          {/* Error message display */}
-          {error && <div className="error">{error}</div>}
-          <form onSubmit={handleSubmit}>
-            {/* Username input */}
-            <input
-              type="text"
-              placeholder="Username"
-              value={username}
-              onChange={handleUsernameChange}
-            />
-            {/* Password input */}
-            <input
-              type="password"
-              placeholder="Password"
-              value={password}
-              onChange={handlePasswordChange}
-            />
-            {/* Submit button */}
-            <button type="submit">Submit</button>
-          </form>
-          {/* Link to signup page */}
-          <div>
-            <p>
-              Dont have an account? <Link to="/signup">Signup</Link>
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
+    <LoginForm
+      {...{
+        username,
+        password,
+        error,
+        handleUsernameChange,
+        handlePasswordChange,
+        handleSubmit,
+      }}
+    />
   );
 }
 

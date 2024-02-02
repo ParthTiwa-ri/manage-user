@@ -1,7 +1,5 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
-import Login from "./Component/Login/Login";
-import SignUp from "./Component/SignUp/SignUp";
 import { AccountsProvider } from "./Context/AccountsContext";
 import UserPanel from "./Pages/UserPanel";
 import Dashboard from "./Component/UserDetail/DashBoard/Dashboard";
@@ -9,6 +7,8 @@ import UpdateDetail from "./Component/UserDetail/UpdateDetail/UpdateDetail";
 import { AuthProvider } from "./Context/AuthContext";
 import ProtectedRoute from "./Pages/ProtectedRoute";
 import PageNotFound from "./Pages/PageNotFound";
+import Login from "./Pages/Login/Login";
+import SignUp from "./Pages/SignUp/SignUp";
 
 function App() {
   return (

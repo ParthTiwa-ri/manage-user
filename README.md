@@ -8,6 +8,9 @@ This is a React application built to allow users to create and manage their acco
 - **User Login:** Provides a login page for existing users to authenticate themselves and access their accounts.
 - **Account Management:** Once logged in, users can view and edit their account information, such as username, email, and password.
 - Cross platform
+- **Responsive Design**: Ensures the application adapts and functions seamlessly across various devices and screen sizes.
+- **Robustness**: Implements error handling, input validation, and security measures to ensure stable and secure user interactions.
+Cross-platform
 
 ## 🛠️  Technologies Used:
 

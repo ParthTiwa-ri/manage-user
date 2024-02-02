@@ -1,6 +1,6 @@
-Certainly! Here's how you can integrate the new sections into your existing README.md:
+Certainly! Here's the corrected syntax:
 
-````markdown
+```markdown
 # User Account Management App
 
 This is a React application built to allow users to create and manage their accounts. It provides functionality for user registration, login, and account information management.
@@ -88,9 +88,4 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-````
-
-```
-
-Now the README.md includes sections detailing data persistence and security features.
 ```

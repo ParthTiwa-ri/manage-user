@@ -1,6 +1,3 @@
-Sure, here's the updated version with emojis added to the headings:
-
-````markdown
 # 📝 User Account Management App
 
 This is a React application built to allow users to create and manage their accounts. It provides functionality for user registration, login, and account information management.

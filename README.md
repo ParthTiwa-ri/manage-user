@@ -8,8 +8,10 @@ This is a React application built to allow users to create and manage their acco
 - **User Login:** Provides a login page for existing users to authenticate themselves and access their accounts.
 - **Account Management:** Once logged in, users can view and edit their account information, such as username, email, and password.
 - Cross platform
+- **Responsive Design**: Ensures the application adapts and functions seamlessly across various devices and screen sizes.
+- **Robustness**: Implements error handling, input validation, and security measures to ensure stable and secure user interactions.
 
-## 🛠️  Technologies Used:
+## 🛠️ Technologies Used:
 
 - **React v16+**
 - **React Router:** For managing navigation and routing within the application.
@@ -18,11 +20,12 @@ This is a React application built to allow users to create and manage their acco
 - **Iconscout Library:** For accessing and using icons within the application for better visual representation.
 
   ![Javascript](https://img.shields.io/badge/Javascript-F0DB4F?style=for-the-badge&labelColor=black&logo=javascript&logoColor=F0DB4F)
-![React](https://img.shields.io/badge/-React-61DBFB?style=for-the-badge&labelColor=black&logo=react&logoColor=61DBFB)
-![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![VSCode](https://img.shields.io/badge/Visual_Studio-0078d7?style=for-the-badge&logo=visual%20studio&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+  ![React](https://img.shields.io/badge/-React-61DBFB?style=for-the-badge&labelColor=black&logo=react&logoColor=61DBFB)
+  ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+  ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+  ![VSCode](https://img.shields.io/badge/Visual_Studio-0078d7?style=for-the-badge&logo=visual%20studio&logoColor=white)
+  ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+
 ## 🛡️ Non functional Feature
 
 - **Route Protection:** Ensures only authenticated users access sensitive pages, redirecting unauthorized users.

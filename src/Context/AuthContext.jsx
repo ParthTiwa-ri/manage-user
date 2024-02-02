@@ -23,7 +23,7 @@ export function AuthProvider({ children }) {
   );
 }
 
-// Step 4: Create a custom hook to use the context
+// Create a custom hook to use the context
 // eslint-disable-next-line react-refresh/only-export-components
 export const useAuth = () => {
   // Use the useContext hook to access the AuthContext

@@ -12,18 +12,18 @@ export const AccountsProvider = ({ children }) => {
   const [accounts, setAccounts] = useState(storedAccounts);
   const [currAcc, setCurrAcc] = useState(storedCurrAcc);
 
-  // Step 3: Use useEffect to save accounts state to local storage whenever it changes
+  // Use useEffect to save accounts state to local storage whenever it changes
   useEffect(() => {
     localStorage.setItem("accounts", JSON.stringify(accounts));
   }, [accounts]);
 
-  // Step 4: Use useEffect to save currAcc state to local storage whenever it changes
+  //  Use useEffect to save currAcc state to local storage whenever it changes
   useEffect(() => {
     localStorage.setItem("currAcc", JSON.stringify(currAcc));
   }, [currAcc]);
 
   return (
-    // Step 5: Wrap your application with the provider
+    // Wrap your application with the provider
     <AccountsContext.Provider
       value={{ accounts, setAccounts, currAcc, setCurrAcc }}
     >

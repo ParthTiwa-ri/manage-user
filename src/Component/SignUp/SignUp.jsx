@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./SignUp.css"; // Import CSS styles
-import { useAccounts } from "../../Context/AccountsContext"; // Import custom hook for managing accounts context
-import Navbar from "../Navbar/Navbar"; // Import Navbar component
-import { useAuth } from "../../Context/AuthContext"; // Import custom hook for managing authentication context
+import "./SignUp.css"; 
+import { useAccounts } from "../../Context/AccountsContext"; 
+import Navbar from "../Navbar/Navbar"; 
+import { useAuth } from "../../Context/AuthContext"; 
 
 function SignUp() {
   // State variables for form inputs

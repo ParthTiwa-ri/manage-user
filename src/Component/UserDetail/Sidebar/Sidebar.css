@@ -69,10 +69,13 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .menuItem > span {
+  .logo > span {
     display: none;
   }
-  .logo {
-    display: none;
+  .sidebar {
+    margin-top: 0;
+  }
+  .menu {
+    margin-top: 0;
   }
 }

@@ -4,9 +4,8 @@ import "./Navbar.css"; // Import your CSS file for styling
 function Navbar() {
   return (
     <nav className="navbar">
-      <div className="logo">
-        <h1>Made By Parth</h1>
-      </div>
+      <h2>Made By Parth</h2>
+
       <ul className="nav-links">
         <li>
           <Link to="/">Home</Link>

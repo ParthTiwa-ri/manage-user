@@ -63,3 +63,10 @@
 .loginForm p a:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+  .loginForm {
+    margin-bottom: 14rem;
+    margin-left: 2rem;
+  }
+}

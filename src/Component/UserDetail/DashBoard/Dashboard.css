@@ -2,29 +2,23 @@
 
 .dashboard-container {
   max-width: 600px;
-  min-width: 400px;
+  min-width: 300px; /* Adjust minimum width for smaller screens */
   margin: 0 auto;
   padding: 20px;
-  /* background-color: #f0f0f0; */
   height: 30rem;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Dashboard.css */
-
 .dashboard-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px; /* Reduce margin for smaller screens */
 }
 
 .dashboard-details p {
   margin: 10px 0;
   padding: 8px;
-  /* background-color: #fff; */
-
   border-radius: 5px;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
 .dashboard-details p:first-child {
@@ -36,13 +30,14 @@
 }
 
 .vertical-center-item {
-  align-self: center; /* Align this specific item vertically center */
+  align-self: center;
 }
+
 .dashboard-details {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  font-size: large;
+  font-size: medium; /* Adjust font size for smaller screens */
   color: #788097;
 }
 
@@ -58,8 +53,25 @@
   justify-content: center;
   align-items: center;
 }
+
 .title span {
-  font-size: 18px;
-  margin-top: 2px;
+  font-size: 16px; /* Adjust font size for smaller screens */
   color: brown;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .dashboard-container {
+    max-width: 90%; /* Adjust maximum width for smaller screens */
+    min-width: auto; /* Remove minimum width */
+    height: auto; /* Adjust height to fit content */
+  }
+
+  .dashboard-details {
+    font-size: small; /* Adjust font size for smaller screens */
+  }
+
+  .title span {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
 }

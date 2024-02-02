@@ -22,3 +22,9 @@
   grid-template-columns: 11rem auto;
   overflow: hidden;
 }
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .glass {
+    grid-template-columns: 1fr; /* Change to single column layout for smaller screens */
+  }
+}
